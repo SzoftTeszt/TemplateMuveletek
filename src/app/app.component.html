@@ -16,18 +16,30 @@
 
 <hr>
 {{obj|json}} -->
+{{obj|json}}
+
+<div *ngFor="let ember of obj; let i=index" class="row">
+  <div *ngFor="let oszlop of oszlopok" class="col">
+   
+    {{ember[oszlop.key]}}
+
+    </div>
+  
+
+</div>
+
 <div class="container">
 
   <div class="row">
     <div *ngFor="let oszlop of oszlopok" class="col">
-      {{oszlop}}
-      <!-- {{oszlop["text"]}} -->
+      {{oszlop.text}}
+
     </div>
     <div class="col">
       Műveletek
     </div>
   </div>
-  {{obj|json}}
+
 
   <div  class="row">
       <div class="col">

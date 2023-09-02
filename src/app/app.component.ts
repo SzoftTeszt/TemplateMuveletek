@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 interface Vmi {
-  key:string;
-  text:string
+  name:string;
+  age:number
 }
 
 @Component({
@@ -17,13 +17,13 @@ export class AppComponent {
   
   
 
-  obj= [
-    {"name":"Kati", "age":22},
-    {"name":"Attila", "age":32},
-    {"name":"Ingrid", "age":31},
+  obj:any =[
+    {name:"Kati", age:22},
+    {name:"Attila", age:32},
+    {name:"Ingrid", age:31},
   ]
 
-  oszlopok:string[]=["name", "age"]
+  oszlopok:any=[{key:"name", text:"Név"}, {key:"age", text:"Kor"}]
 
   ujEmber:any={}
 
